@@ -2,10 +2,13 @@ package com.twog.shopping.ebproj.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name="tbl_menu")
-@Data
+@Getter
+@NoArgsConstructor
 public class Menu {
     @Id
     @Column(name="menu_code")

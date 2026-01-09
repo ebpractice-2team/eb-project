@@ -3,6 +3,8 @@ package com.twog.shopping.ebproj.dto;
 import jakarta.persistence.Column;
 import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+
 
 @Data
 public class MenuDTO {
