@@ -80,11 +80,11 @@ jobs:
           RDS_USERNAME: ${{ secrets.RDS_USERNAME }}
           RDS_PASSWORD: ${{ secrets.RDS_PASSWORD }}
 
-      ###############################################
+      ################################################
 
       - name: Build with Gradle
-        run: ./gradlew clean build -x test
-#        run: ./gradlew clean build
+#        run: ./gradlew clean build -x test
+        run: ./gradlew clean build
         shell: bash
 
       - name: Get current time
