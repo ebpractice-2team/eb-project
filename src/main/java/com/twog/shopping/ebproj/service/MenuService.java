@@ -1,5 +1,7 @@
 package com.twog.shopping.ebproj.service;
 
+import com.twog.shopping.ebproj.dto.MenuDTO;
+import com.twog.shopping.ebproj.entity.Menu;
 import com.twog.shopping.ebproj.repository.MenuRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -14,5 +16,10 @@ public class MenuService {
     public MenuService(MenuRepository menuRepository, ModelMapper modelMapper) {
         this.menuRepository = menuRepository;
         this.modelMapper = modelMapper;
+    }
+
+    public MenuDTO findMenuByMenuCode(int menuCode){
+        Menu selectMenu = menuRepository.findById(menuCode).get();
+        return modelMapper.map(selectMenu, MenuDTO.class);
     }
 }

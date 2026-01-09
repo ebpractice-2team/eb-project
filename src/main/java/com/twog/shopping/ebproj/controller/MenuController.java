@@ -1,8 +1,10 @@
 package com.twog.shopping.ebproj.controller;
 
+import com.twog.shopping.ebproj.dto.MenuDTO;
 import com.twog.shopping.ebproj.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -20,6 +22,10 @@ public class MenuController {
         return "I'm alive!";
     }
 
+    @GetMapping("/menus/{menuCode}")
+    public MenuDTO findMenuByMenuCode(@PathVariable("menuCode") int menuCode){
+        return menuService.findMenuByMenuCode(menuCode);
+    }
 
 
 }
