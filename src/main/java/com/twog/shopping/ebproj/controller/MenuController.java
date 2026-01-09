@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MenuController {
-
+//controller
     private final MenuService menuService;
 
     @Autowired
